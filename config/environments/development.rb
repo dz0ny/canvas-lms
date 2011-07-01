@@ -16,6 +16,10 @@ config.action_controller.perform_caching             = false
 # Really do care if the message wasn't sent.
 config.action_mailer.raise_delivery_errors = true
 
+# Translations
+config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+config.i18n.default_locale = :sl
+
 # Raise an exception on bad mass assignment. Helps us catch these bugs before
 # they hit.
 Canvas.protected_attribute_error = :raise

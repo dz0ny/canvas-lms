@@ -59,7 +59,7 @@
       </td>
     </tr>
   </table>
-  <div style="margin-top: 5px; text-align: right; display: none;"><a href="#" class="cancel_find_rubric_link">Cancel</a></div>
+  <div style="margin-top: 5px; text-align: right; display: none;"><a href="#" class="cancel_find_rubric_link"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a></div>
   <div style="display: none;">
     <a href="<%= context_url(@context, :context_assignment_url, assignment.id) %>" style="display: none;" class="update_rubric_url">&nbsp;</a>
     <a href="<%= context_url(@context, :context_rubric_associations_url) %>" class="select_rubric_url">&nbsp;</a>

@@ -10,6 +10,6 @@
 
   <div class="button-container">
     <button type="submit" class="button">Delete <%= @user.name %></button>
-    <a href="<%= account_url(@context) %>" class="button button-secondary">Cancel</a>
+    <a href="<%= account_url(@context) %>" class="button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
   </div>
 <% end %>

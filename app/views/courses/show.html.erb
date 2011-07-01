@@ -30,7 +30,7 @@
         in your stream and as notifications.
         <div class="button-container">
           <a href="<%= course_self_enrollment_path(@context, @context.self_enrollment_code) %>#" class="button action"><%= image_tag "add.png" %> <span>Join this Course</span></a>
-          <a href="#" class="button button-secondary cancel_button">Cancel</a>
+          <a href="#" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
         </div>
       </div>
     <% elsif @context_enrollment && @context_enrollment.self_enrolled && @context_enrollment.active? && (!session["role_course_#{self.id}"]) %>
@@ -45,7 +45,7 @@
         and as notifications.
         <div class="button-container">
           <a href="<%= course_self_unenrollment_path(@context, @context_enrollment.uuid) %>" class="button action"><%= image_tag "delete_circle.png" %> <span>Drop this Course</span></a>
-          <a href="#" class="button button-secondary cancel_button">Cancel</a>
+          <a href="#" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
         </div>
       </div>
     <% elsif temp_type = session["role_course_#{@context.id}"] %>
@@ -260,7 +260,7 @@ $(document).ready(function() {
     </div>
     <div class="button-container">
       <button type="submit" class="button">Update Layout</button>
-      <button type="button" class="button button-secondary cancel_button">Cancel</button>
+      <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
   <% end %>
   <div class="clear"></div>

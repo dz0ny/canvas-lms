@@ -39,7 +39,7 @@
       <td colspan="2">
         <div class='button-container'>
           <button type="submit" class="button">Create Course</button>
-          <a href="<%= context_url(@context, :context_url) %>" class="button button-secondary">Cancel</a>
+          <a href="<%= context_url(@context, :context_url) %>" class="button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
         </div>
       </td>
     </tr>

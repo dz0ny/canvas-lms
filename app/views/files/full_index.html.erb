@@ -281,7 +281,7 @@
       </div>
       <div class="button-container">
         <button type="submit" class="button small-button">Add File</button>
-        <button type="button" class="button button-secondary cancel_button">Cancel</button>
+        <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
       </div>
     <% end %>
   </li>
@@ -335,7 +335,7 @@
     <textarea id="edit_content_textarea" style="width: 550px; height: 270px"></textarea>
     <div class="button-container">
       <button type="button" class="button save_button">Update File</button>
-      <button type="button" class="button button-secondary cancel_button">Cancel</button>
+      <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
   </div>
 </div>
@@ -393,7 +393,7 @@
           </div>
           <div class="button-container">
             <button type="submit" class="button button-default-action submit_button">Add Collaboration</button>
-            <button type="button" class="button-secondary cancel_button">Cancel</button>
+            <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
           </div>
         </div>
         <% if @current_user && !@current_user.user_services.map(&:service).include?("google_docs") %>
@@ -402,7 +402,7 @@
           to access your Google Docs account:
           <div class="button-container">
             <a class="button button-default-action" href="<%= oauth_url(:service => :google_docs, :return_to => (request.url + "#add_collaboration")) %>">Authorize Google Docs Access</a>
-            <button type="button" class="button-secondary cancel_button">Cancel</button>
+            <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
           </div>
         </div>
         <% end %>
@@ -446,7 +446,7 @@
       </tr><tr>
         <td colspan="3">
           <button type="submit" class="button">Lock this File</button>
-          <button type="button" class="button button-secondary cancel_button">Cancel</button>
+          <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
         </td>
       </tr>
     </table>
@@ -485,7 +485,7 @@
       </tr><tr>
         <td colspan="3">
           <button type="submit" class="button">Lock this Folder</button>
-          <button type="button" class="button button-secondary cancel_button">Cancel</button>
+          <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
         </td>
       </tr>
     </table>

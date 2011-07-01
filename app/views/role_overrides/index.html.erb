@@ -170,7 +170,7 @@
     </table>
     <div class="button-container">
       <button type="submit" class="button">Save Changes</button>
-      <a class="cancel_button button-secondary" href="<%= url_for(:back) %>">Cancel</a>
+      <a class="cancel_button button-secondary" href="<%= url_for(:back) %>"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
     </div>
   <% end -%>
 </div>

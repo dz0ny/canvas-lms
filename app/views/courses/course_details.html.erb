@@ -337,7 +337,7 @@
           <% end %>
           <span class="course_form">
             <button type="submit" class="button">Update Course Details</button>
-            <button type="button" class="cancel_button button-secondary">Cancel</button>
+            <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
           </span>
         </td>
       </tr>
@@ -538,7 +538,7 @@
       <button type="button" class="button verify_syntax_button">Continue...</button>
       <button type="submit" class="button add_users_button">OK Looks Good, Add These Users</button>
       <button type="button" class="go_back_button button-secondary">Go back and edit the list of emails</button>
-      <button type="button" class="cancel_button button-secondary">Cancel</button>
+      <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
     <% end %>
     <div style="text-align: center; display: none;" id="enrollment_dialog">
@@ -603,12 +603,12 @@
         </li>
         <% tabs.select {|t| t[:hidden] }.each do |tab|  %>
           <!-- <span class="ui-icon ui-icon-arrowthick-2-n-s" style="float: left; display: none;"></span> -->
-          <li class="navitem enabled <%= tab[:label].downcase %>" id="nav_edit_tab_id_<%= tab[:id] %>"><%= tab[:label] %><span class="disabled_message"><%= tab[:disabled_message] %></span></li>
+          <li class="navitem enabled <%= tab[:label].downcase %>" id="nav_edit_tab_id_<%= tab[:id] %>"><%= t(tab[:label].to_css_class, :default =>tab[:label], :scope => "navigation.left") %><span class="disabled_message"><%= tab[:disabled_message] %></span></li>
         <% end %>
       </ul>
 
       <p>
-        <button type="submit" class="button">Save</button>
+        <button type="submit" class="button"><%= t("save", :default =>"Save", :scope => "common") %></button>
       </p>
     <% end %>
   </div>
@@ -648,7 +648,7 @@
           <td colspan="2">
             <div class="button-container">
               <button type="submit" class="button">Move Course</button>
-              <button type="button" class="button button-secondary cancel_button">Cancel</button>
+              <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
             </div>
           </td>
         </tr>

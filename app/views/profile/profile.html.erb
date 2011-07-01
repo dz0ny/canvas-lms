@@ -105,7 +105,7 @@
     <td colspan="2">
       <p><a style="font-size: 0.9em" href="<%= user_delete_url(@user.id) %>" class="admin">Delete My Profile </a></p>
       <button type="submit" class="button">Update Profile</button>
-      <button type="button" class="cancel_button button-secondary">Cancel</button>
+      <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </td>
   </tr>
 </table>
@@ -457,7 +457,7 @@ you already use.  Click any of the services in "Other Services" to see what we m
           <td colspan="2">
             <div class="button-container">
               <button class="button submit_button" type="submit">Generate Token</button>
-              <button class="button button-secondary cancel_button" type="button">Cancel</button>
+              <button class="button button-secondary cancel_button" type="button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
             </div>
           </td>
         </tr>
@@ -480,6 +480,6 @@ you already use.  Click any of the services in "Other Services" to see what we m
   <% end %>
   <div class="button-container">
     <button type="button" class="button select_button">Select Image</button>
-    <button type="button" class="button cancel_button button-secondary">Cancel</button>
+    <button type="button" class="button cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
   </div>
 </div>

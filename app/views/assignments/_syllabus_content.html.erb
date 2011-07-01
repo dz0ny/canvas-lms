@@ -25,7 +25,7 @@
   <%= f.text_area :syllabus_body, :style => "width: 100%; height: 300px;", :id => "course_syllabus_body" %>
   <div class='button-container'>
     <button type="submit" class='button'>Update Syllabus</button>
-    <button type="button" class="button-secondary cancel_button">Cancel</button>
+    <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
   </div>
 <% end %>
 <table id="syllabus">

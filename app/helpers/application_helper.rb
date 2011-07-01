@@ -250,7 +250,7 @@ module ApplicationHelper
             end
             tabs.each do |tab|
               path = tab[:no_args] ? send(tab[:href]) : send(tab[:href], @context)
-              html << "<li class='section #{"hidden" if tab[:hidden] || tab[:hidden_unused] }'>" + link_to(tab[:label], path, :class => tab[:label].to_css_class) + "</li>" if tab[:href]
+              html << "<li class='section #{"hidden" if tab[:hidden] || tab[:hidden_unused] }'>" + link_to( t( tab[:label].to_css_class, :default =>  tab[:label], :scope => "navigation.left"), path, :class => tab[:label].to_css_class) + "</li>" if tab[:href]
             end
             html << "</ul></nav>"
             html.join("")

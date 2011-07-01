@@ -112,7 +112,7 @@
   </div>
   <div class="button-container">
     <button type="button" class="button save_button">Extend Time</button>
-    <button type="button" class="button button-secondary cancel_button">Cancel</button>
+    <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
   </div>
 </div>
 <div id="moderate_student_dialog" style="display: none;">
@@ -149,8 +149,8 @@
       <tr>
         <td colspan="2">
           <div class="button-container">
-            <button type="submit" class="button save_button">Save</button>
-            <button type="button" class="button button-secondary cancel_button">Cancel</button>
+            <button type="submit" class="button save_button"><%= t("save", :default =>"Save", :scope => "common") %></button>
+            <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
           </div>
         </td>
       </tr>
@@ -162,7 +162,7 @@
   Time to add: []
   <div class="button-container">
     <button type="button" class="button save_button">Add Time</button>
-    <button type="button" class="button secondary-button cancel_button">Cancel</button>
+    <button type="button" class="button secondary-button cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
   </div>
 </div>
 <div style="display: none;">

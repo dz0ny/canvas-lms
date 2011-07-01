@@ -421,7 +421,7 @@ $(document).ready(function() {
       <%= f.hidden_field :recipients, :class => 'recipient_ids' %>
       <div class="button-container">
         <button type="submit" class="button">Send Message</button>
-        <button type="button" class="cancel_button button-secondary">Cancel</button>
+        <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
       </div>
     </td>
   </tr>

@@ -91,9 +91,9 @@
             <%= render :partial => "shared/rubric", :object => @assignment.try_rescue(:rubric_association).try_rescue(:rubric), :locals => {:assessing => true, :rubric_association => @assignment.rubric_association } if @assignment.try_rescue(:rubric_association).try_rescue(:rubric) %>
             <div class="button-container">
               <% if @assignment.rubric_association && can_do(@assignment.rubric_association, @current_user, :assess) %>
-                <button type="button" class="save_rubric_button button">Save</button>
+                <button type="button" class="save_rubric_button button"><%= t("save", :default =>"Save", :scope => "common") %></button>
               <% end %>
-              <button type="button" class="hide_rubric_link button-secondary">Cancel</button>
+              <button type="button" class="hide_rubric_link button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
             </div>
             <a href="<%= context_url(@context, :context_rubric_association_rubric_assessments_url, @assignment.rubric_association) %>" class="update_rubric_assessment_url" style="display: none;">&nbsp;</a>
             <%= render :partial => "shared/rubric_criterion_dialog" %>

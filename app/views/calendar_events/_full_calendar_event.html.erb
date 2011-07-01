@@ -65,7 +65,7 @@
     <tr>
       <td colspan="4">
         <button type="submit" class="button submit_button"><%= calendar_event.new_record? ? 'Create Event' : 'Update Event' %></button>
-        <button type="button" class="button-secondary cancel_button">Cancel</button>
+        <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
       </td>
     </tr>
   </table>

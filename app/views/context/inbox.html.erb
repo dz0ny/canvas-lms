@@ -148,7 +148,7 @@
           <%= f.hidden_field :recipients, :class => 'recipient_ids' %>
           <div class="button-container">
             <button type="submit" class="button send_button">Send Message</button>
-            <button type="button" class="cancel_button button-secondary">Cancel</button>
+            <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
           </div>
         </td>
       </tr>
@@ -231,7 +231,7 @@
     <div class="clear"></div>
     <div class="button-container">
       <button type="button" class="button select_button">Add Recipients</button>
-      <button type="button" class="button button-secondary cancel_button">Cancel</button>
+      <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
   </div>
 <% end %>

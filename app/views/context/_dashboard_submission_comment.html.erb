@@ -33,7 +33,7 @@
         <span class="submission_user_id" style="display: none;"><%= submission.try_rescue(:user_id) %></span>
         <div class="button-container" style="padding-bottom: 5px;">
           <button type="submit" class="button small-button submit_button">Post Message</button>
-          <button type="button" class="button button-secondary cancel_button">Cancel</button>
+          <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
         </div>
       <% end %>
     <% end %>

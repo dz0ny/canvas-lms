@@ -69,7 +69,7 @@
         </div>
         <div class="button-container">
           <button type="submit" class="button button-default-action">Start Collaborating</button>
-          <button type="button" class="button-secondary cancel_button">Cancel</button>
+          <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
         </div>
       </div>
       <div id="collaborate_authorize_google_docs" class="collaboration_authorization" style="display: none; margin: 20px;">
@@ -77,7 +77,7 @@
         to access your Google Docs account:
         <div class="button-container">
           <a class="button button-default-action" href="<%= oauth_url(:service => :google_docs, :return_to => (request.url + "#add_collaboration")) %>">Authorize Google Docs Access</a>
-          <button type="button" class="button-secondary cancel_button">Cancel</button>
+          <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
         </div>
       </div>
     </td>
@@ -120,7 +120,7 @@
   </div>
   <div class="button-container">
     <button type="submit" class="button button-default-action">Update Collaboration</button>
-    <button type="button" class="button-secondary cancel_button">Cancel</button>
+    <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
   </div>
 <% end %>
 <% js_block do %>

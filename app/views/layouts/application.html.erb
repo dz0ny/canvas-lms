@@ -81,7 +81,7 @@
                 @current_user.cached_current_group_memberships,
                 @current_user.enrollments.ended ].any?{ |e| e.respond_to?(:count) && e.count > 0 }  -%>
         <a href="<%= dashboard_path %>" class="menu-item-title">
-          Courses <%= "& Groups" unless @current_user.cached_current_group_memberships.empty? -%>
+          <%= t("courses", :default =>"Courses", :scope => "navigation.top") %> <%= t("groups", :default =>"& Groups", :scope => "navigation.top") unless @current_user.cached_current_group_memberships.empty? -%>
           <span class="menu-item-title-icon"></span></a>
         <div class="menu-item-drop">
           <table cellspacing="0">
@@ -104,9 +104,9 @@
                 end
                 coalesced_enrollments = coalesced_enrollments.sort_by{|e| e[:sortable] || [999,999, 999] }
                 [
-                  [coalesced_enrollments, "shared/menu_enrollment", "My Courses", courses_path],
-                  [@current_user.cached_current_group_memberships, "shared/menu_group_membership", "Current Groups", groups_path],
-                  [@current_user.accounts, "shared/menu_account", "Managed Accounts", accounts_path]
+                  [coalesced_enrollments, "shared/menu_enrollment", t("my_courses", :default =>"My Courses", :scope => "navigation.top.courses_drop_menu"), courses_path],
+                  [@current_user.cached_current_group_memberships, "shared/menu_group_membership", t("current_groups", :default =>"Current Groups", :scope => "navigation.top.courses_drop_menu"), groups_path],
+                  [@current_user.accounts, "shared/menu_account", t("managed_accounts", :default =>"Managed Accounts", :scope => "navigation.top.courses_drop_menu"), accounts_path]
                 ].each do |triple| %>
               <%= render(:partial => "shared/menu_section", :locals => { 
                            :collection => triple.first[0,max_to_show],
@@ -120,7 +120,7 @@
           </table>
           <% unless @current_user.enrollments.ended.empty? %>
             <div class="menu-item-drop-padded">
-              <%= link_to raw('See All Enrollments &raquo;'), courses_path, :class => "menu-item-drop-float-right" %>
+              <%= link_to raw( t("see_all", :default =>"See All Enrollments &raquo;", :scope => "navigation.top.courses_drop_menu") ), courses_path, :class => "menu-item-drop-float-right" %>
               <!-- <div style="<%= hidden if !@domain_root_account || @domain_root_account.require_authorization_code %>">
                 You can also <a href="<%= getting_started_teacherless_path %>">use Canvas to track grades for your other classes</a>
               </div> -->
@@ -128,7 +128,7 @@
           <% end %>
         </div>
         <%- else #there is nothing inside the home menu, so dont show it as a drop-down -%>
-        <a href="<%= dashboard_path %>" class="menu-item-no-drop">Home</a>
+        <a href="<%= dashboard_path %>" class="menu-item-no-drop"><%= t("home", :default =>"Home", :scope => "navigation.top") %></a>
         <%- end -%>
       </li>
       <%- end -%>
@@ -150,7 +150,7 @@
         total_shown = 0
         if assignment_sets.any?{ |k, v| @current_user.send("assignments_#{k}").length > 0 }  
       -%>
-        <a href="/assignments" class="menu-item-title">Assignments<span class="menu-item-title-icon"></span></a>
+        <a href="/assignments" class="menu-item-title"><%= t("assignments", :default =>"Assignments", :scope => "navigation.top") %><span class="menu-item-title-icon"></span></a>
         <div class="menu-item-drop">
           <table cellspacing="0">
             <tr>
@@ -173,15 +173,15 @@
           </table>
         </div>
         <%- else #there is not anything to show in the assignments drop down  -%>
-        <a href="/assignments" class="menu-item-no-drop">Assignments</a>
+        <a href="/assignments" class="menu-item-no-drop"><%= t("assignments", :default =>"Assignments", :scope => "navigation.top") %></a>
         <%- end -%>
       <% end %>
       </li>
       <li class="menu-item">
-        <%= link_to("Grades", :grades, :class=>"menu-item-no-drop") %>
+        <%= link_to(t("grades", :default =>"Grades", :scope => "navigation.top"), :grades, :class=>"menu-item-no-drop") %>
       </li>
       <li class="menu-item">
-        <a href="<%= calendar_path %>" class="menu-item-no-drop">Calendar</a>
+        <a href="<%= calendar_path %>" class="menu-item-no-drop"><%= t("calendar", :default =>"Calendar", :scope => "navigation.top") %></a>
       </li>      
     </ul>
     <% end %>
@@ -189,7 +189,7 @@
 
   <% end  #unless no-headers %>
   <div id="instructure_ajax_error_box">
-    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link"><%= t("close", :default =>"Close", :scope => "common") %></a></div>
     <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;"></iframe>
   </div>
 <%= render :partial => 'shared/flash_notices' %>

@@ -631,21 +631,21 @@ a {
   <div id="assessment_comments_body" style="<%= hidden if @assessing %>"></div>
   <textarea id="assessment_comments" style="width: 95%; <%= hidden unless @assessing %>"></textarea>
   <div class="button-container" style="<%= hidden unless @assessing %>">
-    <button type="button" class="save_comment_button button">Save</button>
-    <button type="button" class="cancel_comment_button button-secondary">Cancel</button>
+    <button type="button" class="save_comment_button button"><%= t("save", :default =>"Save", :scope => "common") %></button>
+    <button type="button" class="cancel_comment_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
   </div>
   <div style="<%= hidden if @assessing %> text-align: right;">
-    <a href="#" class="cancel_comment_button">Close</a>
+    <a href="#" class="cancel_comment_button"><%= t("close", :default =>"Close", :scope => "common") %></a>
   </div>
 </div>
 <div id="gradebook_rubric" class="popup" style="min-width: 300px;">
   <%= render :partial => "shared/rubric", :object => @association.rubric, :locals => {:association => @association.association, :editable => false, :assessing => @assessing} %>
   <div class="button-container" style="<%= hidden unless @assessing %>">
-    <button type="button" class="save_button button">Save</button>
-    <a href="#" class="hide_rubric_link button-secondary">Cancel</a>
+    <button type="button" class="save_button button"><%= t("save", :default =>"Save", :scope => "common") %></button>
+    <a href="#" class="hide_rubric_link button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
   </div>
   <div style="<%= hidden if @assessing %> text-align: right;">
-    <a href="#" class="hide_rubric_link">Close</a>
+    <a href="#" class="hide_rubric_link"><%= t("close", :default =>"Close", :scope => "common") %></a>
   </div>
   <div style="clear: right;"></div>
 </div>

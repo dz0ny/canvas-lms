@@ -42,7 +42,7 @@
     <% form_tag user_merge_path(@user, :new_user_uuid => @other_user.uuid), :method => :post do %>
       <div class="button-container">
         <button type="submit" class="button">Merge User Accounts</button>
-        <a href="<%= dashboard_path %>" class="button button-secondary">Cancel</a>
+        <a href="<%= dashboard_path %>" class="button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
       </div>
     <% end %>
   <% else %>

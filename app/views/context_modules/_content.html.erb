@@ -99,7 +99,7 @@
       <td colspan="2">
         <div class="button-container" style="margin-top: 10px;">
           <button type="submit" class="button submit_button">Add Module</button>
-          <button type="button" class="cancel_button button-secondary">Cancel</button>
+          <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
         </div>
         <a href="<%= context_url(@context, :context_context_modules_url) %>" style="display: none;" class="add_context_module_url">&nbsp;</a>
       </td>
@@ -115,7 +115,7 @@
     </div>
     <div class="button-container">
       <button type="button" class="button submit_button">Add Prerequisite</button>
-      <button type="button" class="button button-secondary cancel_button">Cancel</button>
+      <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
   </div>
   <%= render :partial => "shared/select_content_dialog", :locals => {:for_modules => true} %>
@@ -144,7 +144,7 @@
         <tr>
           <td colspan="2">
             <button type="submit" class="button">Update</button>
-            <button type="button" class="button button-secondary cancel_button">Cancel</button>
+            <button type="button" class="button button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
           </td>
         </tr>
       </table>

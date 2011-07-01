@@ -116,7 +116,7 @@
     </div>
     <div class="button-container">
       <button type="submit" class="button">Set Grade</button>
-      <button type="button" class="cancel_button button-secondary">Cancel</button>
+      <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
     <a href="<%= context_url(@context, :context_assignment_url, "{{ id }}") %>" style="display: none;" class="default_grade_url">&nbsp;</a>
   <% end %>
@@ -161,7 +161,7 @@
     </div>
     <div class="button-container">
       <button type="submit" class="button">Curve Grades</button>
-      <button type="button" class="cancel_button button-secondary">Cancel</button>
+      <button type="button" class="cancel_button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
   </form>
   <div style="display: none;" id="gradebook_urls">
@@ -246,7 +246,7 @@
     </div>
     <div class="button-container">
       <button type="button" class="button update_button">Update</button>
-      <button type="button" class="button-secondary cancel_button">Cancel</button>
+      <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
     </div>
   </div>
   <div id="assignment_details_dialog" style="display: none;">

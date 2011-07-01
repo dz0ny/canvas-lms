@@ -17,7 +17,7 @@
       <input type="hidden" name="event" value="delete"/>
       <div class="button-container">
         <button class="button big-button" type="submit">Delete Course</button>
-        <a href="<%= context_url(@context, :context_url) %>" class="button button-secondary">Cancel</a>
+        <a href="<%= context_url(@context, :context_url) %>" class="button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
       </div>
     <% end %>
   <% else %>
@@ -31,7 +31,7 @@
       <input type="hidden" name="event" value="conclude"/>
       <div class="button-container">
         <button class="button big-button" type="submit">Conclude Course</button>
-        <a href="<%= context_url(@context, :context_url) %>" class="button button-secondary">Cancel</a>
+        <a href="<%= context_url(@context, :context_url) %>" class="button button-secondary"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
       </div>
     <% end %>
   <% end %>

@@ -18,7 +18,7 @@
   </div>
   <div class="button-container">
     <button type="submit" class="submit_button button big-button">Upload File</button>
-    <a class="cancel_button button button-secondary" href="#">Cancel</a>
+    <a class="cancel_button button button-secondary" href="#"><%= t("cancel", :default =>"Cancel", :scope => "common") %></a>
   </div>
   <a href="<%= context_url(@context, :import_status_context_zip_file_imports_url) %>" class="zip_file_import_status_url" style="display: none;">&nbsp;</a>
 <% end %>

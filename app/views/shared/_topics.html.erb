@@ -144,7 +144,7 @@ var shortName = "<%= short_name %>";
   <div class="clear"></div>
   <div class="button-container">
     <button type="submit" class="button submit_button">Post <%= short_name %></button>
-    <button type="button" class="button-secondary cancel_button">Cancel</button>
+    <button type="button" class="button-secondary cancel_button"><%= t("cancel", :default =>"Cancel", :scope => "common") %></button>
   </div>
 <% end %>
 <% if @context.respond_to?(:assignments) %>
