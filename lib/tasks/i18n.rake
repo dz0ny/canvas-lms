@@ -48,7 +48,7 @@ namespace :i18n do
     end
 
     files = Dir.glob('./**/*rb').
-      reject{ |file| file =~ /\A\.\/(vendor\/plugins\/rails_xss|db|spec)\// }
+      reject{ |file| file =~ /\A\.\/(vendor\/plugins\/rails_xss|db|tolk|spec)\// }
     files &= only if only
     file_count = files.size
 
